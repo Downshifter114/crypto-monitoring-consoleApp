@@ -1,0 +1,15 @@
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\bin\Debug\netcoreapp3.1\Crypto Monitor.exe
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\bin\Debug\netcoreapp3.1\Crypto Monitor.deps.json
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\bin\Debug\netcoreapp3.1\Crypto Monitor.runtimeconfig.json
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\bin\Debug\netcoreapp3.1\Crypto Monitor.runtimeconfig.dev.json
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\bin\Debug\netcoreapp3.1\Crypto Monitor.dll
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\bin\Debug\netcoreapp3.1\Crypto Monitor.pdb
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\obj\Debug\netcoreapp3.1\Crypto Monitor.csproj.AssemblyReference.cache
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\obj\Debug\netcoreapp3.1\Crypto Monitor.AssemblyInfoInputs.cache
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\obj\Debug\netcoreapp3.1\Crypto Monitor.AssemblyInfo.cs
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\obj\Debug\netcoreapp3.1\Crypto Monitor.csproj.CoreCompileInputs.cache
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\obj\Debug\netcoreapp3.1\Crypto Monitor.dll
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\obj\Debug\netcoreapp3.1\Crypto Monitor.pdb
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\obj\Debug\netcoreapp3.1\Crypto Monitor.genruntimeconfig.cache
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\EvermakeRentACar\crypto-monitoring\Crypto Monitor\Crypto Monitor\obj\Debug\netcoreapp3.1\Crypto Monitor.csproj.CopyComplete

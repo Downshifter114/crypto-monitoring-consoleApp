@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "1IU/H28FZjhexxgz4uaVwk8/FWES13xdha5LMDKwf++YZuZh9H3rWR0HRHlwdHCg0NIgZKejJ5DsNgLjCbYXJA==",
+  "success": true,
+  "projectFilePath": "D:\\EvermakeRentACar\\crypto-monitoring\\Crypto Monitor\\Crypto Monitor\\Crypto Monitor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Burak GİZLİCE\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Burak GİZLİCE\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
+  "logs": []
+}
