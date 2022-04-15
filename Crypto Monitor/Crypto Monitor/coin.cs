@@ -19,6 +19,10 @@ namespace Crypto_Monitor
         public decimal? price_usd { get; set; }
         public float? percent_change_24h { get; set; }
         public float? percent_change_7d { get; set; }
+        public decimal? volume24 { get; set; }
+        public decimal? market_cap_usd { get; set; }
+
+
     }   
 }
 

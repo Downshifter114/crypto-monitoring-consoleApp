@@ -90,35 +90,40 @@ namespace Crypto_Monitor
         static void WriteTable(CoinList list)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("-------------------------------------------------------------------------------");
-            Console.WriteLine(String.Format("{0,-4} | {1,-27} | {2, -10} | {3, -10} | {4, -10}", "Rank", "Name", "Price", "24Hrs", "7Days"));
-            Console.WriteLine("-------------------------------------------------------------------------------");
+            Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine(String.Format("{0,-4} | {1,-30} | {2, -14} | {3, -10} | {4, -10} | {5, -20} | {6, -20} |", "Rank", "Name", "Price", "24Hours%", "7Days%", "24HoursVolume", "Marketcap"));
+            Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------");
             foreach (var coin in list.data)
             {
                 if (coin.percent_change_7d >= 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine(String.Format("{0,-4} | {1,-27} | {2, 10} | {3, 10} | {4, 10}",
+                    Console.WriteLine(String.Format("{0,-4} | {1,-30} | {2, 14} | {3, 10} | {4, 10} | {5, -20} | {6, -20} |",
                     "#" + coin.rank,
                     coin.name + '[' + coin.symbol + ']',
                     coin.price_usd + "$",
                     coin.percent_change_24h + "%",
-                    coin.percent_change_7d + "%"));
+                    coin.percent_change_7d + "%",
+                    coin.volume24 + "$",
+                    coin.market_cap_usd + "$"));
                 }
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine(String.Format("{0,-4} | {1,-27} | {2, 10} | {3, 10} | {4, 10}",
+                    Console.WriteLine(String.Format("{0,-4} | {1,-30} | {2, 14} | {3, 10} | {4, 10} | {5, -20} | {6, -20} |",
                     "#" + coin.rank,
                     coin.name + '[' + coin.symbol + ']',
                     coin.price_usd + "$",
                     coin.percent_change_24h + "%",
-                    coin.percent_change_7d + "%"));
+                    coin.percent_change_7d + "%",
+                    coin.volume24 + "$",
+                    coin.market_cap_usd + "$"));
                 }
 
             }
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("-------------------------------------------------------------------------------\n\n");
+            Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------");
+            Write("\nThis table will be refreshing every 4mins, to do something else please type, 'end' first.\n\n", ConsoleColor.Cyan);
         }                
         static CoinList getMarketInfo(string url, string orderby)
         {
@@ -143,6 +148,10 @@ namespace Crypto_Monitor
                 sortedPrice.data = coinList.data.OrderByDescending(x => x.percent_change_24h).ToList();
             if (orderby == "7days")
                 sortedPrice.data = coinList.data.OrderByDescending(x => x.percent_change_7d).ToList();
+            if (orderby == "24volume")
+                sortedPrice.data = coinList.data.OrderByDescending(x => x.volume24).ToList();
+            if (orderby == "marketcap")
+                sortedPrice.data = coinList.data.OrderByDescending(x => x.market_cap_usd).ToList();
             if (orderby == null || orderby == "rank")
                 sortedPrice = coinList;
 
@@ -163,7 +172,7 @@ namespace Crypto_Monitor
             //Spesific check for orderby input.
             secondaryList = primaryList[2].Split(' ').ToList();
             if (secondaryList.Count != 2) return false;
-            if (secondaryList[1] != "rank" && secondaryList[1] != "24hrs" && secondaryList[1] != "7days" && secondaryList[1] != "price") return false;
+            if (secondaryList[1] != "rank" && secondaryList[1] != "24hrs" && secondaryList[1] != "7days" && secondaryList[1] != "price" && secondaryList[1] != "24volume" && secondaryList[1] != "marketcap") return false;
             //If passed all tests, return true.
             return true;
         }
@@ -175,7 +184,7 @@ namespace Crypto_Monitor
             Write("\nWELCOME!", ConsoleColor.DarkYellow);
             Write("\n-The format to start monitoring is:", ConsoleColor.DarkYellow); Write(" 'start, page x, orderby x'", ConsoleColor.DarkRed);
             Write("\n-Page options are:", ConsoleColor.DarkYellow); Write(" numbers. (0, 1, 2, ...)", ConsoleColor.DarkRed);
-            Write("\n-Orderby options are:", ConsoleColor.DarkYellow); Write(" ('price', '24hrs', '7days')", ConsoleColor.DarkRed);
+            Write("\n-Orderby options are:", ConsoleColor.DarkYellow); Write(" ('price', '24hrs', '7days', '24volume', 'marketcap')", ConsoleColor.DarkRed);
             Write("\n-To end the repeating process type", ConsoleColor.DarkYellow); Write(" 'end'", ConsoleColor.DarkRed);
             Write("\n-To close the app, type", ConsoleColor.DarkYellow); Write(" 'quit'", ConsoleColor.DarkRed);
             Write("\n-To see this message again, type", ConsoleColor.DarkYellow); Write(" 'help'", ConsoleColor.DarkRed);
