@@ -98,7 +98,7 @@ namespace Crypto_Monitor
                 if (coin.percent_change_7d >= 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine(String.Format("{0,-4} | {1,-30} | {2, 14} | {3, 10} | {4, 10} | {5, -20} | {6, -20} |",
+                    Console.WriteLine(String.Format("{0,-4} | {1,-30} | {2, 14} | {3, 10} | {4, 10} | {5, 20} | {6, 20} |",
                     "#" + coin.rank,
                     coin.name + '[' + coin.symbol + ']',
                     coin.price_usd + "$",
@@ -110,7 +110,7 @@ namespace Crypto_Monitor
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine(String.Format("{0,-4} | {1,-30} | {2, 14} | {3, 10} | {4, 10} | {5, -20} | {6, -20} |",
+                    Console.WriteLine(String.Format("{0,-4} | {1,-30} | {2, 14} | {3, 10} | {4, 10} | {5, 20} | {6, 20} |",
                     "#" + coin.rank,
                     coin.name + '[' + coin.symbol + ']',
                     coin.price_usd + "$",
