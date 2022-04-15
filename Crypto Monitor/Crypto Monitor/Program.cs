@@ -26,7 +26,7 @@ namespace Crypto_Monitor
                 if (userInput == "help") Help();
                 if (userInput == "end") Stop();
                 if (userInput == "quit") System.Environment.Exit(0);
-                if (userInput == "start") Start(); //Start the timer.
+                if (userInput == "start") Start(); 
                 GetInput();
             }
         }      
